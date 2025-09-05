@@ -14,7 +14,6 @@ jobs:
       - name: List current directory
         run: ls -la
 
-
   system-job:
     runs-on: ubuntu-latest
     steps:
