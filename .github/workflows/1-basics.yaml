@@ -3,7 +3,7 @@ on: [push]  # Trigger on every push
 
 jobs:
   hello-job:
-    runs-on: windows
+    runs-on: ubuntu-latest
     steps:
       - name: Simple greeting
         run: echo "Hello, GitHub Actions!"
@@ -15,7 +15,7 @@ jobs:
         run: ls -la
 
   system-job:
-    runs-on: windows
+    runs-on: ubuntu-latest
     steps:
       - name: Show system information
         run: |
@@ -31,12 +31,10 @@ jobs:
 
   summary-job:
     needs: [hello-job , system-job]
-    runs-on: windows
+    runs-on: ubuntu-latest
     steps:
       - name: Wait message
         run: echo "Both previous jobs completed successfully!"
-
-
 
       - name: Final summary
         run: |
